@@ -49,7 +49,8 @@ describe("getAllMakes()", () => {
 
     expect(result).toEqual(makes);
     expect(mockFetch).toHaveBeenCalledWith(
-      expect.stringContaining("/GetAllMakes?format=json")
+      expect.stringContaining("/GetAllMakes?format=json"),
+      expect.objectContaining({ signal: expect.any(Object) })
     );
   });
 
@@ -71,7 +72,8 @@ describe("getModelsForMake()", () => {
 
     expect(result).toEqual(models);
     expect(mockFetch).toHaveBeenCalledWith(
-      expect.stringContaining("/GetModelsForMake/Toyota?format=json")
+      expect.stringContaining("/GetModelsForMake/Toyota?format=json"),
+      expect.objectContaining({ signal: expect.any(Object) })
     );
   });
 
@@ -79,7 +81,8 @@ describe("getModelsForMake()", () => {
     mockResponse([]);
     await getModelsForMake("Land Rover");
     expect(mockFetch).toHaveBeenCalledWith(
-      expect.stringContaining("Land%20Rover")
+      expect.stringContaining("Land%20Rover"),
+      expect.objectContaining({ signal: expect.any(Object) })
     );
   });
 
@@ -101,7 +104,8 @@ describe("getMakesForVehicleType()", () => {
 
     expect(result).toEqual(makes);
     expect(mockFetch).toHaveBeenCalledWith(
-      expect.stringContaining("/GetMakesForVehicleType/Motorcycle?format=json")
+      expect.stringContaining("/GetMakesForVehicleType/Motorcycle?format=json"),
+      expect.objectContaining({ signal: expect.any(Object) })
     );
   });
 });
