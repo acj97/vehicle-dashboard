@@ -62,7 +62,7 @@ export default function Sidebar({ onClose }: SidebarProps) {
         <p className="px-3 pb-3 font-display text-[8px] tracking-[0.25em] text-neon-cyan/50 uppercase">
           Navigation
         </p>
-        {navLinks.map(({ href, label, icon: Icon }) => {
+        {navLinks.filter(({ href }) => href !== "/dashboard" || isAdmin).map(({ href, label, icon: Icon }) => {
           const active = pathname === href || pathname.startsWith(href + "/");
           return (
             <Link
