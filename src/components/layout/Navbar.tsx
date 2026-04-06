@@ -5,7 +5,7 @@ import { ChevronRight, Menu } from "lucide-react";
 
 const pageMeta: Record<string, { title: string; sub: string }> = {
   "/dashboard": { title: "Dashboard", sub: "System Overview" },
-  "/vehicles": { title: "Makes", sub: "Make Registry" },
+  "/makes": { title: "Makes", sub: "Make Registry" },
 };
 
 interface NavbarProps {

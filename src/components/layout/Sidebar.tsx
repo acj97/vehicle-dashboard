@@ -10,7 +10,7 @@ import Button from "@/components/ui/Button";
 
 const navLinks: NavLink[] = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/vehicles", label: "Makes", icon: Car },
+  { href: "/makes", label: "Makes", icon: Car },
 ];
 
 interface SidebarProps {
